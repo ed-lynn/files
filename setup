@@ -1,15 +1,12 @@
 #!/bin/sh
 
-# Add pacstall
-sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
-
 # Get the latest package lists
 apt update
 
-# Install Nala from pacstall
-pacstall -I nala-deb
+# Install Nala
+apt install nala
 
-# Install from Repo
+# Install
 nala install steam -y
 nala install discord -y
 nala install lutris -y
